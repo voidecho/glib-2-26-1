@@ -37,13 +37,13 @@
 #define GLIB_BINARY_AGE 2601
 
 /* Byte contents of gmutex */
-#define GLIB_BYTE_CONTENTS_GMUTEX no
+#define GLIB_BYTE_CONTENTS_GMUTEX 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 
 /* Define to the GLIB interface age */
 #define GLIB_INTERFACE_AGE 1
 
 /* Define the location where the catalogs will be installed */
-#define GLIB_LOCALE_DIR "/usr/share/locale"
+#define GLIB_LOCALE_DIR "/usr/local/share/locale"
 
 /* Define to the GLIB major version */
 #define GLIB_MAJOR_VERSION 2
@@ -55,10 +55,10 @@
 #define GLIB_MINOR_VERSION 26
 
 /* The size of gmutex, as computed by sizeof. */
-#define GLIB_SIZEOF_GMUTEX 24
+#define GLIB_SIZEOF_GMUTEX 40
 
 /* The size of system_thread, as computed by sizeof. */
-#define GLIB_SIZEOF_SYSTEM_THREAD 4
+#define GLIB_SIZEOF_SYSTEM_THREAD 8
 
 /* alpha atomic implementation */
 /* #undef G_ATOMIC_ALPHA */
@@ -106,7 +106,7 @@
 #define G_VA_COPY va_copy
 
 /* 'va_lists' cannot be copies as values */
-/* #undef G_VA_COPY_AS_ARRAY */
+#define G_VA_COPY_AS_ARRAY 1
 
 /* Define to 1 if you have `alloca', as a function or macro. */
 #define HAVE_ALLOCA 1
@@ -129,11 +129,11 @@
 
 /* Define if you have a version of the snprintf function with semantics as
    specified by the ISO C99 standard. */
-/* #undef HAVE_C99_SNPRINTF */
+#define HAVE_C99_SNPRINTF 1
 
 /* Define if you have a version of the vsnprintf function with semantics as
    specified by the ISO C99 standard. */
-/* #undef HAVE_C99_VSNPRINTF */
+#define HAVE_C99_VSNPRINTF 1
 
 /* define to 1 if Carbon is available */
 /* #undef HAVE_CARBON */
@@ -199,7 +199,7 @@
 #define HAVE_FLOAT_H 1
 
 /* Define to 1 if you have the <fstab.h> header file. */
-/* #undef HAVE_FSTAB_H */
+#define HAVE_FSTAB_H 1
 
 /* Define to 1 if you have the `fsync' function. */
 #define HAVE_FSYNC 1
@@ -238,7 +238,7 @@
 #define HAVE_GMTIME_R 1
 
 /* define to use system printf */
-/* #undef HAVE_GOOD_PRINTF */
+#define HAVE_GOOD_PRINTF 1
 
 /* Define to 1 if you have the <grp.h> header file. */
 #define HAVE_GRP_H 1
@@ -293,7 +293,7 @@
 #define HAVE_LONG_LONG 1
 
 /* define if system printf can print long long */
-/* #undef HAVE_LONG_LONG_FORMAT */
+#define HAVE_LONG_LONG_FORMAT 1
 
 /* Define to 1 if you have the `lstat' function. */
 #define HAVE_LSTAT 1
@@ -386,7 +386,7 @@
 #define HAVE_SETMNTENT 1
 
 /* Define to 1 if you have the `setresuid' function. */
-/* #undef HAVE_SETRESUID */
+#define HAVE_SETRESUID 1
 
 /* Define to 1 if you have the `setreuid' function. */
 #define HAVE_SETREUID 1
@@ -477,7 +477,7 @@
 /* #undef HAVE_STRUCT_STAT_ST_MTIM_TV_NSEC */
 
 /* Define to 1 if `tm_gmtoff' is a member of `struct tm'. */
-#define HAVE_STRUCT_TM_TM_GMTOFF 1
+/* #undef HAVE_STRUCT_TM_TM_GMTOFF */
 
 /* Define to 1 if you have the `symlink' function. */
 #define HAVE_SYMLINK 1
@@ -556,7 +556,7 @@
 
 /* Define if your printf function family supports positional parameters as
    specified by Unix98. */
-/* #undef HAVE_UNIX98_PRINTF */
+#define HAVE_UNIX98_PRINTF 1
 
 /* Define to 1 if you have the `unsetenv' function. */
 #define HAVE_UNSETENV 1
@@ -617,13 +617,13 @@
 /* #undef NO_MINUS_C_MINUS_O */
 
 /* global 'sys_errlist' not found */
-#define NO_SYS_ERRLIST 1
+/* #undef NO_SYS_ERRLIST */
 
 /* global 'sys_siglist' not found */
-#define NO_SYS_SIGLIST 1
+/* #undef NO_SYS_SIGLIST */
 
 /* global 'sys_siglist' not declared */
-#define NO_SYS_SIGLIST_DECL 1
+/* #undef NO_SYS_SIGLIST_DECL */
 
 /* Define to the address where bug reports for this package should be sent. */
 #define PACKAGE_BUGREPORT "http://bugzilla.gnome.org/enter_bug.cgi?product=glib"
@@ -647,7 +647,7 @@
 #define POSIX_MAX_PRIORITY sched_get_priority_max(SCHED_OTHER)
 
 /* define if posix_memalign() can allocate any size */
-/* #undef POSIX_MEMALIGN_WITH_COMPLIANT_ALLOCS */
+#define POSIX_MEMALIGN_WITH_COMPLIANT_ALLOCS 1
 
 /* Minimum POSIX RT priority */
 #define POSIX_MIN_PRIORITY sched_get_priority_min(SCHED_OTHER)
@@ -668,7 +668,7 @@
 #define SIZEOF_INT 4
 
 /* The size of `long', as computed by sizeof. */
-#define SIZEOF_LONG 4
+#define SIZEOF_LONG 8
 
 /* The size of `long long', as computed by sizeof. */
 #define SIZEOF_LONG_LONG 8
@@ -677,10 +677,10 @@
 #define SIZEOF_SHORT 2
 
 /* The size of `size_t', as computed by sizeof. */
-#define SIZEOF_SIZE_T 4
+#define SIZEOF_SIZE_T 8
 
 /* The size of `void *', as computed by sizeof. */
-#define SIZEOF_VOID_P 4
+#define SIZEOF_VOID_P 8
 
 /* The size of `__int64', as computed by sizeof. */
 #define SIZEOF___INT64 0
@@ -700,7 +700,7 @@
 #define STDC_HEADERS 1
 
 /* Using GNU libiconv */
-#define USE_LIBICONV_GNU 1
+/* #undef USE_LIBICONV_GNU */
 
 /* Using a native implementation of iconv in a separate library */
 /* #undef USE_LIBICONV_NATIVE */
@@ -721,7 +721,7 @@
 #endif
 
 /* Number of bits in a file offset, on hosts where this is settable. */
-#define _FILE_OFFSET_BITS 64
+/* #undef _FILE_OFFSET_BITS */
 
 /* Define for large files, on AIX-style hosts. */
 /* #undef _LARGE_FILES */

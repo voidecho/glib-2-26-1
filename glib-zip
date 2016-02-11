@@ -6,13 +6,13 @@
 ZIP=/tmp/glib-2.26.1.zip
 DEVZIP=/tmp/glib-dev-2.26.1.zip
 
-cd /usr
+cd /usr/local
 
 mkdir -p share/doc/glib-2.26.1
-cp -p /home/xuyincheng/work/xiaoqiang/router/system/build_dir/target-arm-xiaomi-linux-uclibcgnueabi/glib-2.26.1/COPYING share/doc/glib-2.26.1
+cp -p /home/xuyincheng/work/xiaoqiang/glib_2_26_1/COPYING share/doc/glib-2.26.1
 
 mkdir -p share/doc/glib-dev-2.26.1
-cp -p /home/xuyincheng/work/xiaoqiang/router/system/build_dir/target-arm-xiaomi-linux-uclibcgnueabi/glib-2.26.1/COPYING share/doc/glib-dev-2.26.1
+cp -p /home/xuyincheng/work/xiaoqiang/glib_2_26_1/COPYING share/doc/glib-dev-2.26.1
 
 if test X86 = X64; then
   helperbits=64
